@@ -1,0 +1,58 @@
+// Bootstrap library.
+@import 'bootstrap';
+
+// Base-theme overrides.
+@import 'overrides';
+
+@orange: #f47045;
+
+body {
+  //background: red;
+  font-size: 16px;
+}
+
+header.navbar.navbar-default {
+  background: transparent;
+  border: none;
+
+  @media @tablet {
+    padding: 0;
+  }
+
+  .navbar-header {
+    width: 100%;
+
+    .name {
+      margin: 80px 0 0;
+      font-size: 2.4em;
+      color: @orange;
+      font-weight: bold;
+    }
+  }
+
+  .navbar-collapse {
+    clear: left;
+    background: @orange;
+
+    nav {
+      ul {
+        li {
+          a {
+            color: #fff;
+            background: transparent;
+
+            &:hover {
+              color: #fff;
+            }
+          }
+
+          &.active, &:hover {
+            a {
+              background: darken(@orange, 15%);
+            }
+          }
+        }
+      }
+    }
+  }
+}
